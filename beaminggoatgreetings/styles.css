@@ -1,0 +1,81 @@
+/* Color Palette */
+:root {
+    --off-white: #FEFFFE;
+    --lavender-gray: #E9EBF8;
+    --cool-gray: #B4B8C5;
+    --warm-gray: #A5A299;
+    --muted-mauve: #8D818C;
+    --black: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--black); /* Changed text color to black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: var(--lavender-gray);
+    color: var(--black);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cool-gray);
+}
+
+/* Main Content */
+main {
+    background-color: var(--lavender-gray);
+    width: 80%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 3px solid var(--cool-gray);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--black); /* Ensures text inside main remains black */
+}
+
+/* Footer */
+footer {
+    background-color: var(--cool-gray);
+    color: var(--off-white);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p em {
+    color: var(--black);
+}
