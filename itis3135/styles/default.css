@@ -18,3 +18,16 @@ nav > a {
     color: darkgreen;
     text-align: center;
 }
+
+a {
+    color: darkgreen; /* Matches your nav color for consistency */
+    text-decoration: none; /* Removes underlines */
+}
+
+a:hover {
+    color: #ff6600; /* A bright color for hover effect */
+}
+
+a:visited {
+    color: #9933cc; /* Changes color for visited links */
+}
