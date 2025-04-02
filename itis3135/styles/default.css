@@ -31,3 +31,39 @@ a:hover {
 a:visited {
     color: #9933cc; /* Changes color for visited links */
 }
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #064e3b; /* Dark Green */
+}
+
+/* Table Header - Dark Green */
+th {
+    background-color: #064e3b; /* Dark Green */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) {
+    background-color: #d1fae5; /* Very Light Green */
+}
+
+tr:nth-child(odd) {
+    background-color: white; /* White */
+}
+
+/* Total Row - Slightly Darker Green */
+tr:last-child {
+    font-weight: bold;
+    background-color: #a7f3d0; /* Slightly Darker Light Green */
+}
+
+/* Table Borders */
+td, th {
+    border: 1px solid #064e3b; /* Dark Green Borders */
+    padding: 8px;
+}
