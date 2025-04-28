@@ -3,11 +3,11 @@ body {
     background-color: lightgreen;
 }
 
-/* Heading Style (applies to all sizes) */
+/* Heading Style (Only defined once for all screen sizes) */
 h1 {
     font-family: monospace;
     text-align: center;
-    font-size: 40px; /* Default size for larger screens */
+    font-size: 40px; /* Default size for large screens */
 }
 
 /* Paragraph Style */
