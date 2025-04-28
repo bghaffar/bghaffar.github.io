@@ -1,47 +1,56 @@
-body{
+/* Body Styling */
+body {
     background-color: lightgreen;
 }
 
-h1{
+/* Main Element Styling */
+main {
+    max-width: 1200px; /* Ensures it doesn't stretch too wide */
+    width: 90%;        /* Responsive to screen size */
+    margin: 0 auto;    /* Centers the main element horizontally */
+}
+
+/* Heading Styling */
+h1 {
     font-family: monospace;
     text-align: center;
     font-size: 40px;
 }
-
-
-p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+s
+/* Paragraph Styling */
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
+/* Navigation Links */
 nav > a {
     color: darkgreen;
     text-align: center;
 }
 
+/* General Links */
 a {
     color: darkgreen; /* Matches your nav color for consistency */
     text-decoration: none; /* Removes underlines */
 }
 
 a:hover {
-    color: #ff6600; /* A bright color for hover effect */
+    color: #ff6600; /* Bright color on hover */
 }
 
 a:visited {
-    color: #9933cc; /* Changes color for visited links */
+    color: #9933cc; /* Different color for visited links */
 }
 
 /* Table Styling */
 table {
-    border: 1 px solid #064e3b;
+    border: 1px solid #064e3b; /* Fixed the typo here */
     padding: 5px;
-    
 }
 
-    
-
-/* Table Header - Dark Green */
+/* Table Header */
 th {
     background-color: #064e3b; /* Dark Green */
     color: white;
@@ -49,7 +58,7 @@ th {
     text-align: left;
 }
 
-/* Alternating Row Colors */
+/* Alternating Table Row Colors */
 tr:nth-child(even) {
     background-color: #d1fae5; /* Very Light Green */
 }
@@ -58,14 +67,47 @@ tr:nth-child(odd) {
     background-color: white; /* White */
 }
 
-/* Total Row - Slightly Darker Green */
+/* Total Row - Bold and Different Background */
 tr:last-child {
     font-weight: bold;
     background-color: #a7f3d0; /* Slightly Darker Light Green */
 }
 
-/* Table Borders */
+/* Table Cell Borders */
 td, th {
     border: 1px solid #064e3b; /* Dark Green Borders */
     padding: 8px;
+}
+
+/* Responsive Design: Media Queries */
+
+/* Mobile devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Tablets (portrait and landscape, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Desktops (901px and up) */
+@media (min-width: 901px) {
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+    }
 }
