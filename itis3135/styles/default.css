@@ -3,11 +3,11 @@ body {
     background-color: lightgreen;
 }
 
-/* Heading Style */
+/* Heading Style (applies to all sizes) */
 h1 {
     font-family: monospace;
     text-align: center;
-    font-size: 40px;
+    font-size: 40px; /* Default size for larger screens */
 }
 
 /* Paragraph Style */
@@ -54,7 +54,6 @@ th {
 tr:nth-child(even) {
     background-color: #d1fae5; /* Very Light Green */
 }
-
 tr:nth-child(odd) {
     background-color: white; /* White */
 }
@@ -79,13 +78,11 @@ main {
 }
 
 /* ---- Responsive Design: Media Queries ---- */
-
 /* Small devices (phones, 0px to 600px) */
 @media (max-width: 600px) {
     h1 {
-        font-size: 28px;
+        font-size: 28px; /* Adjusts heading for phones */
     }
-
     p {
         font-size: 16px;
     }
@@ -94,13 +91,12 @@ main {
 /* Medium devices (tablets, 601px to 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
     h1 {
-        font-size: 32px;
+        font-size: 32px; /* Adjusts heading for tablets */
     }
-
     p {
         font-size: 18px;
     }
 }
 
 /* Large devices (desktops, 901px and up) */
-/* No changes needed — defaults already apply */
+/* No changes needed for desktop, as default styles already apply */
