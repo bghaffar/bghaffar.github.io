@@ -1,13 +1,19 @@
-/* Background color for the page */
-body {
-    background-color: lightgreen;
+/* Reset styles */
+html, body {
+    all: initial;
 }
 
-/* Heading Style (Only defined once for all screen sizes) */
+/* Base styles */
+body {
+    background-color: lightgreen; /* Light green background */
+}
+
+/* Heading Style (ONLY ONE TIME) */
 h1 {
     font-family: monospace;
     text-align: center;
-    font-size: 40px; /* Default size for large screens */
+    font-size: 40px; /* Default large font size */
+    margin: 20px 0;
 }
 
 /* Paragraph Style */
@@ -27,11 +33,9 @@ a {
     color: darkgreen; /* Matches nav color */
     text-decoration: none; /* Removes underlines */
 }
-
 a:hover {
     color: #ff6600; /* Bright color for hover effect */
 }
-
 a:visited {
     color: #9933cc; /* Color for visited links */
 }
@@ -41,62 +45,53 @@ table {
     border: 1px solid #064e3b;
     padding: 5px;
 }
-
-/* Table Header - Dark Green */
 th {
     background-color: #064e3b; /* Dark Green */
     color: white;
     padding: 10px;
     text-align: left;
 }
-
-/* Alternating Row Colors */
+td, th {
+    border: 1px solid #064e3b;
+    padding: 8px;
+}
 tr:nth-child(even) {
     background-color: #d1fae5; /* Very Light Green */
 }
 tr:nth-child(odd) {
-    background-color: white; /* White */
+    background-color: white;
 }
-
-/* Total Row - Slightly Darker Green */
 tr:last-child {
     font-weight: bold;
     background-color: #a7f3d0; /* Slightly Darker Light Green */
 }
 
-/* Table Borders */
-td, th {
-    border: 1px solid #064e3b; /* Dark Green Borders */
-    padding: 8px;
-}
-
 /* Main Page Container */
 main {
-    max-width: 1200px; /* Limits width to 1200px */
-    width: 90%; /* Flexible width */
-    margin: 0 auto; /* Centers the main content */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* ---- Responsive Design: Media Queries ---- */
-/* Small devices (phones, 0px to 600px) */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px; /* Adjusts heading for phones */
-    }
-    p {
-        font-size: 16px;
-    }
-}
+/* Laptops / Big Screens (default already applied) */
 
-/* Medium devices (tablets, 601px to 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    h1 {
-        font-size: 32px; /* Adjusts heading for tablets */
+/* Tablets (601px to 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    main {
+        font-size: 18px;
     }
     p {
         font-size: 18px;
     }
 }
 
-/* Large devices (desktops, 901px and up) */
-/* No changes needed for desktop, as default styles already apply */
+/* Phones (370px to 600px) */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        font-size: 16px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
