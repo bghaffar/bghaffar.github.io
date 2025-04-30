@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BYO Intro</title>
+    <script src="scripts/survey.js" defer></script>
+    <link rel="stylesheet" href="styles/default.css">
+
+</head>
+<body>
+    <div id="header"></div>
+
+    <h2>BYO Intro</h2>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+    <form id="introForm">
+        <label>Name: <input type="text" id="name" required></label><br>
+        <label>Mascot: <input type="text" id="mascot" required></label><br>
+        <label>Image: <input type="file" id="image" accept=".png,.jpg,.jpeg" required></label><br>
+        <label>Image Caption: <input type="text" id="caption" required></label><br>
+
+        <label>Personal Background: <input type="text" id="personal" required></label><br>
+        <label>Professional Background: <input type="text" id="professional" required></label><br>
+        <label>Academic Background: <input type="text" id="academic" required></label><br>
+        <label>Background in Web Development: <input type="text" id="webdev" required></label><br>
+        <label>Primary Computer Platform: <input type="text" id="platform" required></label><br>
+
+        <div id="coursesSection">
+            <label>Courses Currently Taking:</label>
+            <div id="coursesContainer">
+                <input type="text" name="course" class="courseInput">
+            </div>
+            <button type="button" onclick="addCourse()">Add Course</button>
+            <button type="button" onclick="removeCourse()">Remove Last Course</button>
+        </div><br>
+
+        <label>Funny Thing?: <input type="text" id="funny"></label><br>
+        <label>Anything Else?: <input type="text" id="anything"></label><br>
+
+        <label>
+            <input type="checkbox" id="agree" required>
+            I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+        </label><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <div id="result" style="display:none;"></div>
+
+    <div id="footer"></div>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+       </a>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+         </a>
+       
+       <script>
+          document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+               document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+       </script>
+</body>
+</html>
