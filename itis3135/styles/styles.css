@@ -200,10 +200,11 @@ figcaption {
   border-radius: 8px;
 }
 
-.logo-container {
+.logo-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  padding: 1rem 0;
 }
 
 .logo {
