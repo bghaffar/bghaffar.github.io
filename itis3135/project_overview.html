@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Overview</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/1.png" alt="Fitness Philosophy Logo" class="logo">
+    <h1>Fitness Philosophy</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="workout_plans.html">Workout Plans</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="user_form.html">User Form</a></li>
+        <li><a href="project_overview.html" class="active">Project Overview</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview: Fitness Philosophy</h2>
+      <p>This website is being developed to support Faridun Jabborov’s fitness journey and serve as an online platform where he can eventually 
+        onboard clients for personal training or coaching services. 
+        The purpose of this site is to document and share his fitness philosophy, routines, and useful content for anyone 
+        interested in health and exercise. Over time, it will grow into a potential base for a fitness coaching business.</p>
+
+      <h3>Intended Users</h3>
+      <p>Users are people interested in fitness—beginners to intermediate—who want easy access to structured workouts and inspiration.</p>
+
+      <h3>Content Overview</h3> 
+      <ul>
+        <li>Home Page: Introduction to the site</li>
+        <li>Workout Plans: Structured routines by day</li>
+        <li>Gallery: Visual display of workout equipment and techniques</li>
+        <li>Contact Page: To reach out for consultations</li>
+        <li>User Form: To gather personalized preferences</li>
+      </ul>
+
+      <h3>Client Information</h3>
+      <p>Name: Faridun Jabborov<br>
+         Organization: Personal/Private Business<br>
+         Email: fjabboro@charlotte.edu <br>
+         Phone: [private]
+      </p>
+
+      <h3>Wireframe</h3>
+      <figure>
+        <img src="images/fitness.png" alt="Wireframe of homepage layout">
+        <figcaption>Homepage wireframe created with draw.io</figcaption>
+      </figure>
+      <a href="https://drive.google.com/file/d/1MbZuvFO6BLX6itGl37J46Muf2_Ix15i_/view?usp=sharing">Wireframe Link</a>
+
+      <h3>Site Map</h3>
+      <figure>
+        <img src="images/site_map.png" alt="Site Map">
+        <figcaption>Site map outlining website navigation</figcaption>
+      </figure>
+      <a href="https://www.gloomaps.com/n6DsTMvdKC">Sitemap Link</a>
+
+      <h3>Page Design</h3>
+      <ul>
+        <li><strong>home.html</strong>: Welcome page - everyone - general info - no form - links to other pages.</li>
+        <li><strong>plans.html</strong>: Workout plans - customers - muscle-focused routines - no form - includes filter buttons.</li>
+        <li><strong>gallery.html</strong>: Exercise visuals - all users - interactive accordion gallery using jQuery UI.</li>
+        <li><strong>contact.html</strong>: Consultation request - users - form with validation and AJAX feedback.</li>
+        <li><strong>userform.html</strong>: Form to submit preferences - users - validated form inputs, preview on submit.</li>
+      </ul>
+
+      <h3>Dynamic Functionality</h3>
+      <p>
+        - Plans page includes filterable sections using jQuery<br>
+        - Gallery uses jQuery UI accordion widget<br>
+        - Contact form submits via AJAX and shows a response<br>
+        - User form includes JS validation and preview output<br>
+        - Example inspiration: <li><a href="https://www.bodybuilding.com/">Bodybuilding.com</a></li>
+        <li><a href="https://musclewiki.com">Musclewiki.com</a></li>
+        <li><a href="https://www.fitnessblender.com">Fitnessblender.com</a></li>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fitness Philosophy</p>
+    <p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+           </a>
+           <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+             </a>
+           
+           <script>
+              document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+                   document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+           </script>
+    </p>
+  </footer>
+</body>
+</html>
+

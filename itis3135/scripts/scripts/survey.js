@@ -1,3 +1,5 @@
+// survey.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("introForm");
     form.addEventListener("submit", handleSubmit);
@@ -25,7 +27,9 @@ function handleSubmit(event) {
         return;
     }
 
-    const courses = Array.from(document.getElementsByClassName("courseInput")).map(input => input.value.trim()).filter(Boolean);
+    const courses = Array.from(document.getElementsByClassName("courseInput"))
+        .map(input => input.value.trim())
+        .filter(value => value.length > 0);
 
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -40,7 +44,8 @@ function handleSubmit(event) {
             <p><strong>Academic Background:</strong> ${academic}</p>
             <p><strong>Background in Web Development:</strong> ${webdev}</p>
             <p><strong>Primary Computer Platform:</strong> ${platform}</p>
-            <p><strong>Courses Currently Taking:</strong><ul>${courses.map(c => `<li>${c}</li>`).join('')}</ul></p>
+            <p><strong>Courses Currently Taking:</strong></p>
+            <ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul>
             ${funny ? `<p><strong>Funny Thing:</strong> ${funny}</p>` : ''}
             ${anything ? `<p><strong>Anything Else:</strong> ${anything}</p>` : ''}
             <button onclick="resetPage()">Start Over</button>
@@ -52,7 +57,8 @@ function handleSubmit(event) {
 }
 
 function handleReset() {
-    document.getElementById("coursesContainer").innerHTML = `<input type="text" name="course" class="courseInput">`;
+    const container = document.getElementById("coursesContainer");
+    container.innerHTML = `<input type="text" name="course" class="courseInput">`;
 }
 
 function addCourse() {
@@ -73,8 +79,9 @@ function removeCourse() {
 }
 
 function resetPage() {
-    document.getElementById("introForm").reset();
+    const form = document.getElementById("introForm");
+    form.reset();
     handleReset();
     document.getElementById("result").style.display = "none";
-    document.getElementById("introForm").style.display = "block";
+    form.style.display = "block";
 }

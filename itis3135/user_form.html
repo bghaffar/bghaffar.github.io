@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Philosophy - User Form</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="user_form.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="images/1.png" alt="Fitness Philosophy Logo" class="logo">
+    <h1>Fitness Philosophy</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="workout_plans.html">Workout Plans</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="user_form.html" class="active">User Form</a></li>
+        <li><a href="project_overview.html">Project Overview</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-section">
+    <h2>Share Your Fitness Goals</h2>
+    <form id="fitnessForm">
+      <label for="name">Name: *</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age: *</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="level">Fitness Level: *</label>
+      <select id="level" name="level" required>
+        <option value="">-- Select --</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+
+      <label for="muscle">Muscle Group Focus: *</label>
+      <select id="muscle" name="muscle" required>
+        <option value="">-- Select --</option>
+        <option value="Upper Body">Upper Body</option>
+        <option value="Lower Body">Lower Body</option>
+        <option value="Full Body">Full Body</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Mobility">Mobility</option>
+      </select>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <div class="form-buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <section id="formSummary" class="summary hidden">
+      <h3>Your Submitted Fitness Profile:</h3>
+      <p><strong>Name:</strong> <span id="summaryName"></span></p>
+      <p><strong>Age:</strong> <span id="summaryAge"></span></p>
+      <p><strong>Fitness Level:</strong> <span id="summaryLevel"></span></p>
+      <p><strong>Muscle Group Focus:</strong> <span id="summaryMuscle"></span></p>
+      <p><strong>Comments:</strong> <span id="summaryComments"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fitness Philosophy. All rights reserved.</p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+       </a>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+         </a>
+       
+       <script>
+          document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+               document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+       </script>
+  </footer>
+</body>
+</html>

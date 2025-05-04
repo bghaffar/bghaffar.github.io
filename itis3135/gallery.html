@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Philosophy - Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding-bottom: 60px;
+      background-color: #fdf6ec;
+    }
+
+    header {
+      background-color: #1b2a49;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #fdf6ec;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .exercise {
+      flex: 1 1 calc(33% - 1rem);
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .exercise:hover {
+      transform: scale(1.02);
+    }
+
+    .exercise img {
+      width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      padding: 1rem;
+      font-weight: bold;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 60px;
+      left: 10px;
+      background-color: #1b2a49;
+      color: #fff;
+      padding: 0.5rem;
+      border-radius: 4px;
+      display: none;
+      z-index: 1;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background-color: #1b2a49;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      margin-top: 2rem;
+    }
+    .logo {
+  height: 150px;
+  width: auto;
+  border-radius: 8px;
+}
+
+
+    @media (max-width: 768px) {
+      .exercise {
+        flex: 1 1 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="images/1.png" alt="Fitness Philosophy Logo" class="logo">
+    <h1>Fitness Philosophy - Exercise Gallery</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="workout_plans.html">Workout Plans</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="project_overview.html">Project Overview</a>
+      <a href="user_form.html" class="active">User Form</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <label for="muscleFilter">Filter by Muscle Group:</label>
+    <select id="muscleFilter">
+      <option value="all">All</option>
+      <option value="upper">Upper Body</option>
+      <option value="lower">Lower Body</option>
+      <option value="core">Core</option>
+      <option value="back">Back</option>
+      <option value="recovery">Recovery</option>
+    </select>
+
+    <div class="gallery">
+      <!-- Each image block -->
+      <div class="exercise upper">
+        <img src="images/bench_press.jpg" alt="Bench Press">
+        <div class="caption">Bench Press – Chest & Triceps</div>
+        <div class="tooltip">Keep your back neutral and wrists aligned.</div>
+      </div>
+
+      <div class="exercise lower">
+        <img src="images/back_squat.jpg" alt="Back Squat">
+        <div class="caption">Back Squat – Quads & Glutes</div>
+        <div class="tooltip">Knees over toes, engage your core.</div>
+      </div>
+
+      <div class="exercise upper">
+        <img src="images/bicep_curl.jpg" alt="Bicep Curl">
+        <div class="caption">Bicep Curl – Arms</div>
+        <div class="tooltip">Don’t swing; isolate the biceps.</div>
+      </div>
+
+      <div class="exercise core">
+        <img src="images/crunches.jpg" alt="Crunches">
+        <div class="caption">Crunches – Core</div>
+        <div class="tooltip">Lift with abs, not your neck.</div>
+      </div>
+
+      <div class="exercise lower">
+        <img src="images/lunges.jpg" alt="Lunges">
+        <div class="caption">Lunges – Quads, Glutes & Hamstrings</div>
+        <div class="tooltip">Keep your front knee over the ankle, back upright.</div>
+      </div>
+      
+
+      <div class="exercise lower">
+        <img src="images/deadlift.jpg" alt="Deadlift">
+        <div class="caption">Deadlift – Glutes & Hamstrings</div>
+        <div class="tooltip">Hinge at hips; don’t round your back.</div>
+      </div>
+
+      <div class="exercise back">
+        <img src="images/lat_pull.jpg" alt="Lat Pull">
+        <div class="caption">Lat Pull – Back</div>
+        <div class="tooltip">Pull elbows down, avoid leaning back.</div>
+      </div>
+
+      <div class="exercise upper">
+        <img src="images/overhead_press.jpg" alt="Overhead Press">
+        <div class="caption">Overhead Press – Shoulders</div>
+        <div class="tooltip">Brace your core and press straight up.</div>
+      </div>
+
+      <div class="exercise core">
+        <img src="images/plank.jpg" alt="Plank">
+        <div class="caption">Plank – Core Stability</div>
+        <div class="tooltip">Keep spine straight and glutes tight.</div>
+      </div>
+
+      <div class="exercise back">
+        <img src="images/pull_up.jpg" alt="Pull-Up">
+        <div class="caption">Pull-Up – Back & Biceps</div>
+        <div class="tooltip">Use full range of motion.</div>
+      </div>
+
+      <div class="exercise upper">
+        <img src="images/push_up.jpg" alt="Push-Up">
+        <div class="caption">Push-Up – Chest & Triceps</div>
+        <div class="tooltip">Keep elbows tucked and core engaged.</div>
+      </div>
+
+      <div class="exercise recovery">
+        <img src="images/stretching.jpg" alt="Stretching">
+        <div class="caption">Stretching – Muscle Recovery</div>
+        <div class="tooltip">Hold each stretch for 15–30 seconds.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Fitness Philosophy | Educational use only
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+       </a>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+         </a>
+       
+       <script>
+          document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+               document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+       </script>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      $('#muscleFilter').on('change', function () {
+        const selected = $(this).val();
+        if (selected === 'all') {
+          $('.exercise').show();
+        } else {
+          $('.exercise').hide();
+          $('.' + selected).fadeIn(300);
+        }
+      });
+
+      $('.exercise').hover(function () {
+        $(this).find('.tooltip').fadeIn(200);
+      }, function () {
+        $(this).find('.tooltip').fadeOut(200);
+      });
+
+      $('.exercise').click(function () {
+        $(this).toggleClass('expanded');
+        $(this).find('.caption').slideToggle();
+      });
+    });
+  </script>
+</body>
+</html>
