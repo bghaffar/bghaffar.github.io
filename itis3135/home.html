@@ -19,6 +19,7 @@
         <li><a href="contact.html">Contact Info</a></li>
         <li><a href="project_overview.html">Project Overview</a></li>
         <li><a href="user_form.html" class="active">User Form</a></li>
+        <li><a href="documentation.html" class="active">Documentation Summary</a></li
       </ul>
     </nav>
   </header>
@@ -57,15 +58,21 @@
     <p>
         <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
             <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-           </a>
-           <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-             </a>
-           
-           <script>
-              document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-                   document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-           </script>
+          </a>
+          <a href="https://wave.webaim.org/" target="_blank">
+            <img src="https://wave.webaim.org/images/wave-logo.png" alt="WAVE Web Accessibility Evaluation Tool" style="border: 0; width: 100px; height: auto;">
+        </a>
+        
+          
+          <script>
+            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+            document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
+          </script>
+          
     </p>
   </footer>
 </body>

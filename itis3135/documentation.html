@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Project Summary</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Project Documentation</h1>
+        <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="workout_plans.html">Workout Plans</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+              <li><a href="project_overview.html">Project Overview</a></li>
+              <li><a href="user_form.html" class="active">User Form</a></li>
+              <li><a href="documentation.html" class="active">Documentation Summary</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Meeting the Specifications -->
+        <section id="meeting-specifications">
+            <h2>Meeting the Specifications</h2>
+            <p>This website meets the following specifications:</p>
+            <ul>
+                <li>Interactive functionality using JavaScript:</li>
+                <ul>
+                    <li>1. Contact Form Validation and Confirmation - This JavaScript checks the form's validity when the user submits it. If the form is valid, it hides the form and displays a confirmation message, simulating the form submission process.</li>
+                    <li>2. Interactive Image Toggling - Using jQuery, clicking on the buttons toggles the visibility of images such as the site map and wireframe, providing a dynamic user experience.</li>
+                    <li>3. AJAX Simulation and Footer Year Injection - The AJAX functionality simulates a response by updating the page content with a message, and the footer automatically updates the year using JavaScript to reflect the current year dynamically.</li>
+                </ul>
+                <li>The site follows the CRAP principles in the following ways:</li>
+                <ul>
+                    <li>Contrast: The site uses contrasting colors like the dark header background (#1b2a49) against light text (#fff) for visibility. Links are styled to change color on hover, improving interactivity and highlighting user actions. Form fields have clear contrast between background and borders to ensure easy readability.</li>
+                    <li>Repetition: Consistent design elements, like the navigation bar, footer, and form styling, are repeated throughout the site. These elements share the same colors, borders, and typography, creating a unified experience.</li>
+                    <li>Alignment: Content is aligned consistently, especially in the navigation menu, forms, and footer. The text in the header and footer is centered, ensuring symmetry. Form fields and buttons are aligned vertically, improving usability.</li>
+                    <li>Proximity: Related content, such as form labels, input fields, and submit buttons, are grouped together with clear spacing. This helps the user quickly identify related information. For example, in the contact form, labels and inputs are close together, making the form intuitive to fill out.</li>
+                </ul>
+            </ul>
+        </section>
+
+        <!-- Section 2: Feedback and Updates -->
+        <section id="feedback-updates">
+            <h2>Feedback and Updates</h2>
+            <p>Feedback received during critiques:</p>
+            <ul>
+                <li>1. Add a user feedback form to allow clients to tailor their workouts based on their personal needs.</li>
+                <li>2. The gallery lacked sufficient images to effectively demonstrate different muscle groups and proper form.</li>
+            </ul>
+            <p>How I updated my website based on this feedback:</p>
+            <ul>
+                <li>1. I added a user feedback form, allowing users to provide specific workout preferences. I implemented this using interactive JavaScript to enhance the user experience.</li>
+                <li>2. I expanded the gallery by adding more images. I also included captions on the images so that when users hover over them, they receive instructions on how to perform the exercises correctly.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Future Plans and Stakeholder Needs -->
+        <section id="future-plans">
+            <h2>Meeting Stakeholder Needs and Future Plans</h2>
+            <p>This website addresses the needs of my stakeholders by providing a clean, simple, and easy-to-use platform for beginners to create personalized workout plans. Faridun, who reviewed the site, praised its simplicity and effectiveness, noting that it allows users to quickly start their fitness journey and contact him for a tailored fitness plan.</p>
+            <p>Future plans for the website include:</p>
+            <ul>
+                <li>Expanding the gallery to include more exercises and muscle groups for a more comprehensive workout demonstration.</li>
+                <li>Refining the user feedback form for even more detailed customization of workout plans.</li>
+                <li>Adding additional features to enhance user engagement, such as progress tracking and a community forum for sharing fitness tips.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+           </a>
+           <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+             </a>
+           
+           <script>
+              document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+                   document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+           </script>
+    </footer>
+</body>
+</html>
